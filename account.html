@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products - The Shopping Fiesta </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="image/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="image/logo.png" alt="logo" width="150px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="products.html">Products</a></li>
+                    <li> <a href="contact.html">Contact</a></li>
+                    <li> <a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="image/cart1.png" alt="Cart" width="100px" height="100px"></a>
+            <img src="image/menu.png" class="menu-icon" alt="Cart" width="100px" height="100px"
+            onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- ------------------account-page----------------------- -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col2">
+                    <!-- ---------------------video---------------------- -->
+                    <div class="Video">
+                        <!-- <div class="small-container"> -->
+                            <!-- <div class="row"> -->
+                                <!-- <div class="col4"> -->
+                                <video autoplay muted loop id="myVideo">
+                                    <source src="image/video/sale5.mp4" type="video/mp4">
+                                </video>
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="User Name">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="User Name">
+                            <input type="email" placeholder="E-mail">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+   <!-- --------------footer---------------- -->
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download your app</h3>
+                <p>For both android and ios phones</p>
+                <div class="app-logo">
+                    <img src="image/store1.jpg" alt="" width: 130px;>
+                </div>
+                <div class="app-logo">
+                    <img src="image/store2.jpg" alt="" width: 130px;>
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="image/logo.png" alt="">
+                <p>The Shopping Fiesta Internet Private Limited, <br>
+                    Aligarh,202001 <br>
+                    Uttar Pradesh, India <br>
+                    Telephone: 1800 272 7474</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>About</li>
+                    <li>Help</li>
+                    <li>Policy</li>
+                    <li>Coupons</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Social</h3>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Linkden</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p>
+        <div class="copyrights">All rights reserved by <b> Theplayer_9 </b>(owner) &#169;</div>
+        </p>
+
+    </div>
+</div>
+    <!-- -------------------js for toggle menu------------------------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "250px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!-- -------------------js for toggle Form------------------------- -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+
+
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+
+
+            }
+    </script>
+
+
+
+</body>
+
+</html>
